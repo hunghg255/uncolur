@@ -1,6 +1,6 @@
 {
   "name": "uncolur",
-  "version": "2.1.11",
+  "version": "0.0.5",
   "license": "MIT",
   "sideEffects": false,
   "exports": {
@@ -14,7 +14,7 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "bin": {
-    "agile-css": "./bin/cli.mjs"
+    "uncolur": "./bin/cli.mjs"
   },
   "files": [
     "bin",
@@ -24,9 +24,9 @@
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",
-    "test:cli": "node ./dist/cli.mjs -w -p 1234 -c awesome",
+    "test:cli": "node ./bin/cli.mjs --color '#ff0'",
     "lint": "tsc --noEmit",
-    "start": "esno src/index.ts",
+    "start": "esno play/index.ts",
     "test": "vitest",
     "verify-commit": "verify-commit-msg",
     "prepare": "git-scm-hooks",
@@ -38,21 +38,19 @@
     "bumpp": "^9.2.0",
     "esno": "^0.16.3",
     "git-scm-hooks": "^0.0.7",
-    "terser": "^5.19.3",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2",
-    "verify-commit-msg": "^0.0.10"
+    "verify-commit-msg": "^0.0.10",
+    "vitest": "^0.34.4"
   },
   "dependencies": {
-    "chokidar": "^3.5.3",
-    "commander": "^10.0.1",
-    "globby": "^13.2.2",
-    "jiti": "^1.19.3",
-    "unbuild": "^1.2.1"
+    "unbuild": "^1.2.1",
+    "unprompts": "^1.0.11"
   },
-  "keywords": [],
+  "keywords": ["colors", "generate", "tailwindcss"],
   "git-hooks": {
     "pre-commit": "npm run lint",
     "commit-msg": "npm run verify-commit"
-  }
+  },
+  "repository": "https://github.com/hunghg255/uncolur.git"
 }
