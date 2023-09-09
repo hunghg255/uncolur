@@ -5,7 +5,7 @@ import { getColors } from '.';
 
 export async function startCli() {
   try {
-    const cli = cac('uncolour');
+    const cli = cac('uncolur');
 
     cli.version(version).option('--color <color>', 'Color').help();
 
@@ -16,7 +16,7 @@ export async function startCli() {
       }
 
       console.log(getColors(args.color));
-      console.log(`DEMO: https://uncolour.vercel.app/?color=${args.color.startsWith('#') ? args.color.slice(1) : args.color}`);
+      console.log(`DEMO: https://uncolur.vercel.app/?color=${args.color.startsWith('#') ? args.color.slice(1) : args.color}`);
     });
 
     cli.parse();
