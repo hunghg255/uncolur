@@ -14,20 +14,18 @@ Usage:
 npx uncolur@latest --color '#ABABAB'
 ```
 
-- module
-```js
-import { getColors } from 'uncolur'
+- module:
 
-const theme = getColors('#ABABAB')
+```js
+// Tailwindcss
+import { getColorsTailwindcss } from 'uncolur'
+
+const theme = getColorsTailwindcss('#ABABAB')
 
 // Using rgb
-const theme = getColors('172,172,172')
-```
+const theme = getColorsTailwindcss('172,172,172')
 
-- Result
-
-
-```js
+// Result
 {
   50: '#FBFBFB',
   100: '#F7F7F7',
@@ -41,6 +39,26 @@ const theme = getColors('172,172,172')
   900: '#333333',
   950: '#333333',
 }
+```
+
+```js
+// Ant Design
+
+import { getColorsAntd } from 'uncolur'
+
+const theme = getColorsAntd('#FF0000')
+
+const themeDark = getColorsAntd('#FF0000', { dark: true })
+
+
+// Result
+[
+  '#fffbe6', '#fff3a3',
+  '#fff27a', '#fff352',
+  '#fff829', '#ffff00',
+  '#d2d900', '#a7b300',
+  '#7e8c00', '#586600'
+]
 ```
 
 ## Playground

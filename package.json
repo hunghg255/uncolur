@@ -44,10 +44,15 @@
     "vitest": "^0.34.4"
   },
   "dependencies": {
+    "@ctrl/tinycolor": "^4.0.2",
     "unbuild": "^1.2.1",
     "unprompts": "^1.0.11"
   },
-  "keywords": ["colors", "generate", "tailwindcss"],
+  "keywords": [
+    "colors",
+    "generate",
+    "tailwindcss"
+  ],
   "git-hooks": {
     "pre-commit": "npm run lint",
     "commit-msg": "npm run verify-commit"

@@ -1,5 +1,5 @@
 import { expect,  test } from "vitest";
-import { getColors } from '../src/index'
+import { getColorsTailwindcss } from '../src/index'
 import { parseColor } from '../src/utils'
 
 const fixture = {
@@ -13,26 +13,27 @@ const fixture = {
     400: '#C4C4C4',
     500: '#ABABAB',
     600: '#9A9A9A',
-    700: '#676767',
-    800: '#4D4D4D',
-    900: '#333333'
+    "700": "#808080",
+    "800": "#676767",
+    "900": "#4D4D4D",
+    "950": "#323232",
   }
 }
 
-test('getColors (hex)', () => {
-  expect(getColors(fixture.hex)).toMatchObject(fixture.theme)
+test('getColorsTailwindcss (hex)', () => {
+  expect(getColorsTailwindcss(fixture.hex)).toMatchObject(fixture.theme)
 })
 
-test('getColors (rgb)', () => {
-  expect(getColors(fixture.rgb)).toMatchObject(fixture.theme)
+test('getColorsTailwindcss (rgb)', () => {
+  expect(getColorsTailwindcss(fixture.rgb)).toMatchObject(fixture.theme)
 })
 
-test('getColors (invalid)', () => {
-  expect(() => getColors('red')).toThrowError(/Invalid color format!/)
+test('getColorsTailwindcss (invalid)', () => {
+  expect(() => getColorsTailwindcss('red')).toThrowError(/Invalid color format!/)
 })
 
-test('getColors (invalid obj)', () => {
-  expect(() => getColors({})).toThrowError(/Color should be string!/)
+test('getColorsTailwindcss (invalid obj)', () => {
+  expect(() => getColorsTailwindcss({})).toThrowError(/Color should be string!/)
 })
 
 test('parseColor (shorthand)', () => {

@@ -1,9 +1,11 @@
-import { getColors } from '../src/index';
+import { getColorsTailwindcss, getColorsAntd } from '../src/index';
 
-const theme = getColors('#ABABAB')
+const theme = getColorsTailwindcss('#FF0000');
 console.log(theme);
 
 // Using rgb
-const theme1 = getColors('172,172,172')
+// const theme1 = getColors('172,172,172')
 
+// console.log(theme1);
+const theme1 = getColorsAntd('#FF0000', { theme: 'dark' });
 console.log(theme1);

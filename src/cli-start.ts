@@ -1,7 +1,7 @@
 import { cac } from 'unprompts';
 //@ts-ignore
 import { version } from '../package.json';
-import { getColors } from '.';
+import { getColorsAntd, getColorsTailwindcss } from '.';
 
 export async function startCli() {
   try {
@@ -15,8 +15,16 @@ export async function startCli() {
         process.exit(1);
       }
 
-      console.log(getColors(args.color));
-      console.log(`DEMO: https://uncolur.vercel.app/?color=${args.color.startsWith('#') ? args.color.slice(1) : args.color}`);
+      console.log('Tailwindcss');
+      console.log(getColorsTailwindcss(args.color));
+
+      console.log('\nAnt Design');
+      console.log(getColorsAntd(args.color));
+
+      console.log('\nAnt Design Dark');
+      console.log(getColorsAntd(args.color, { theme: 'dark' }));
+
+      console.log(`\nDEMO: https://uncolur.vercel.app/?color=${args.color.startsWith('#') ? args.color.slice(1) : args.color}`);
     });
 
     cli.parse();
