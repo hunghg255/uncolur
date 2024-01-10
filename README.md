@@ -1,4 +1,19 @@
-# uncolur
+<p align="center">
+<a href="https://www.npmjs.com/package/uncolur" target="_blank" rel="noopener noreferrer">
+<img src="https://api.iconify.design/ic:round-color-lens.svg?color=%23fdb4e2" alt="logo" width='100'/></a>
+</p>
+
+<p align="center">
+  A library generate color palette from a color
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/uncolur" target="_blank" rel="noopener noreferrer"><img src="https://badge.fury.io/js/csvs-parsers.svg" alt="NPM Version" /></a>
+  <a href="https://www.npmjs.com/package/uncolur" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/npm/dt/csvs-parsers.svg?logo=npm" alt="NPM Downloads" /></a>
+  <a href="https://bundlephobia.com/result?p=uncolur" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/bundlephobia/minzip/uncolur" alt="Minizip" /></a>
+  <a href="https://github.com/hunghg255/uncolur/graphs/contributors" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/all_contributors-1-orange.svg" alt="Contributors" /></a>
+  <a href="https://github.com/hunghg255/uncolur/blob/main/LICENSE" target="_blank" rel="noopener noreferrer"><img src="https://badgen.net/github/license/hunghg255/uncolur" alt="License" /></a>
+</p>
 
 Install:
 
